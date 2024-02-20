@@ -23,18 +23,19 @@ export default function TextForm(props) {
     const HandleLOclick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+      
         props.showAlert("Text LowerCased", "success");
     }
-
     const HandleReverseclick = () => {
         if (text != null) {
             let rev = "";
-            for (let i = text.length; i >= 0; i--) {
+            for (let i = text.length-1; i >= 0; i--) {
                 rev += text[i];
             }
             setText(rev);
             props.showAlert("Text Reversed", "success");
         }
+        else
         props.showAlert("First Enter the Text", "danger");
     }
     const HandleClearclick = () => {
