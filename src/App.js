@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Parent from './Components/Parent';
 
 
 
@@ -57,6 +58,8 @@ function App() {
           <Route exact path="/" element={<div className="container my-3"><TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} showAlert={showAlert} /></div>} />
 
         </Routes>
+
+        <Parent/>
 
       </Router>
     </>
